@@ -2581,7 +2581,7 @@ _ = ax.<span class="t-f">legend</span>([FAMILY, FAMILY + <span class="t-s">' For
       var on = c.dataset.key === key;
       c.classList.toggle('active', on);
       if (on) c.setAttribute('aria-current','page'); else c.removeAttribute('aria-current');
-      if (on && c.scrollIntoView) c.parentNode.scrollTo({left: c.offsetLeft - 16, behavior: 'smooth'});
+      if (on && c.scrollIntoView) c.parentNode.scrollTo({left: c.offsetLeft - c.parentNode.offsetLeft - 8, behavior: 'smooth'});
     });
     highlight(document.getElementById(key));
     if (scroll) window.scrollTo(0,0);
